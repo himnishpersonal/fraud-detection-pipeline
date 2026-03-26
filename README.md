@@ -110,8 +110,3 @@ fraud-detection-engine/
 
 ---
 
-## Resume Bullet
-
-Fill in real numbers from `outputs/metrics.json` before adding this to your resume:
-
-> "Built end-to-end fraud detection system on 284K real credit card transactions — Isolation Forest + Random Forest with SMOTE achieving [PR-AUC] PR-AUC, catching [X]% of fraudulent transactions by dollar value, deployed as live Streamlit investigation dashboard with per-transaction SHAP waterfall explanations"
