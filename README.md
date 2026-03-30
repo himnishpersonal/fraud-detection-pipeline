@@ -15,7 +15,9 @@ Production-style fraud detection system built on 284,807 real European credit ca
 | Fraud caught (Recall) | **86.7%** of fraudulent transactions |
 | Precision at threshold 0.30 | **76.6%** |
 | F1 score | 0.813 |
-| Net value per test set | **$9,998** |
+| Net value per test set | **$9,998** (fixed avg) / **$25,869** (MC mean) |
+| Net value 90% CI (Monte Carlo, 10K sims) | **$6,822 – $67,899** |
+| P(net savings > 0) | **100%** across all simulated scenarios |
 | False positive rate | 0.046% |
 
 ---
@@ -105,7 +107,8 @@ fraud-detection-engine/
 │
 └── notebooks/
     ├── 01_eda.ipynb             # Exploratory analysis — 7 cells, read-only
-    └── 02_modeling.ipynb        # Post-training analysis — 6 cells, reads saved model
+    ├── 02_modeling.ipynb        # Post-training analysis — 6 cells, reads saved model
+    └── 03_monte_carlo.ipynb     # Business impact under uncertainty — 10,000 simulations
 ```
 
 ---

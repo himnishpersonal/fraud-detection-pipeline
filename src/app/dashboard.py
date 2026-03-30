@@ -189,7 +189,8 @@ with tab_feed:
     def _row_style(row):
         risk = row["Risk Level"]
         color = "#FCEBEB" if risk == "High Risk" else ("#FAEEDA" if risk == "Suspicious" else "")
-        return [f"background-color: {color}"] * len(row)
+        bg = f"background-color: {color}; " if color else ""
+        return [f"{bg}color: #1a1a1a; font-weight: 500"] * len(row)
 
     st.dataframe(
         show_cols.style.apply(_row_style, axis=1),
